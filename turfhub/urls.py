@@ -16,7 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from turf_management.views import TurfListCreateView
+from turf_management.views import TurfRetrieveUpdateDeleteView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    # turf
+    path("turf/",TurfListCreateView.as_view()),
+    path("turf/<int:pk>/",TurfRetrieveUpdateDeleteView.as_view()),
+    
+
+
 ]

@@ -1,0 +1,47 @@
+#===========================Turf============
+
+#api call for listing turf
+###
+GET http://127.0.0.1:8000/turf/
+Accept: application/json
+
+#api call for adding turf
+###
+POST http://127.0.0.1:8000/turf/
+Content-Type: application/json
+
+{
+    "name":"Anfield",
+    "location":"Kolazhy , Thrissur, kolazhy",
+    "address":"anfield , thiroor , thrissur",
+    "description":"tur ground 3 side ",
+    "opening_time":"06:00",
+    "closing_time":"11:45",
+    "day_price":500,
+    "night_price":1750,
+    "facilities":"parking , rest room, ground boy support"
+  
+}
+
+#api call for fetcthing turf detail
+###
+GET http://127.0.0.1:8000/turf/1/
+Accept: application/json
+
+#api call for update turf 
+###
+PUT http://127.0.0.1:8000/turf/1/
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "JSK",
+  "location": "Thiroor , Thrissur, pottore",
+  "address": "jsk , thiroor , thrissur",
+  "description": "soil ground 360",
+  "opening_time": "06:00:00",
+  "closing_time": "23:45:00",
+  "day_price": "750.00",
+  "night_price": "1550.00",
+  "facilities": "parking , rest room, ground boy support"
+}
